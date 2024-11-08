@@ -1,7 +1,17 @@
 import reflex as rx
 # ESTILOS DE LOS CONTENIDOS DE LA PAGINA
 
+estilo_general = {
+    
+}
 
+estilo_botones = {
+    
+}
+
+estilo_texto = {
+    
+}
 
 class calculadora(rx.State):
     resultado: int = 0
