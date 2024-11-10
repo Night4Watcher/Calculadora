@@ -1,18 +1,6 @@
 import reflex as rx
 # ESTILOS DE LOS CONTENIDOS DE LA PAGINA
 
-estilo_general = {
-    
-}
-
-estilo_botones = {
-    "background_color": "white"
-}
-
-estilo_texto = {
-    
-}
-
 class calculadora(rx.State):
     resultado: int = 0
     numero_mostrado: str = "0"
