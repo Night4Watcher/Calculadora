@@ -6,7 +6,7 @@ estilo_general = {
 }
 
 estilo_botones = {
-    
+    "background_color": "white"
 }
 
 estilo_texto = {
@@ -82,6 +82,19 @@ class calculadora(rx.State):
         self.numero_mostrado = "0"    
     
     def sumar(self):
+        """
+        Mediante esta funcion se prepara al programa en caso de realizar
+        una suma, para ello se convierte el numero que se habia introducido
+        hasta la solicitud de una suma y se convierte a entero.
+        
+        Keyword arguments:
+        numero_mostrado -- Esta variable es la encargada de ser el numero que se le muestra al usuario en la pagina.
+        numero_1 -- Este es el numero que se utilizara cuando se resuelva la operación solicitada.
+        operador -- Esta variable numerica esta relacionada a un match-case para cuando el usuario quiera resolver
+                    la operacion que haya solicitado.
+        texto_ayuda -- Esta variable es para que en caso de haber algo que el programa no pueda realizar en lugar de
+                    saltar un error se le informe al usuario de lo que necesita hacer para corregirse.
+        """
         if self.numero_mostrado != "0":
             self.numero_1 = int(self.numero_mostrado)
             self.numero_mostrado = "0"
@@ -89,6 +102,19 @@ class calculadora(rx.State):
         self.texto_ayuda = ""
     
     def resta(self):
+        """
+        Mediante esta funcion se prepara al programa en caso de realizar
+        una resta, para ello se convierte el numero que se habia introducido
+        hasta la solicitud de una resta y se convierte a entero.
+        
+        Keyword arguments:
+        numero_mostrado -- Esta variable es la encargada de ser el numero que se le muestra al usuario en la pagina.
+        numero_1 -- Este es el numero que se utilizara cuando se resuelva la operación solicitada.
+        operador -- Esta variable numerica esta relacionada a un match-case para cuando el usuario quiera resolver
+                    la operacion que haya solicitado.
+        texto_ayuda -- Esta variable es para que en caso de haber algo que el programa no pueda realizar en lugar de
+                    saltar un error se le informe al usuario de lo que necesita hacer para corregirse.
+        """
         if self.numero_mostrado != "0":
             self.numero_1 = int(self.numero_mostrado)
             self.numero_mostrado = "0"
@@ -96,6 +122,19 @@ class calculadora(rx.State):
         self.texto_ayuda = ""
     
     def multiplicar(self):
+        """
+        Mediante esta funcion se prepara al programa en caso de realizar
+        una multiplicacion, para ello se convierte el numero que se habia introducido
+        hasta la solicitud de una multiplicacion y se convierte a entero.
+        
+        Keyword arguments:
+        numero_mostrado -- Esta variable es la encargada de ser el numero que se le muestra al usuario en la pagina.
+        numero_1 -- Este es el numero que se utilizara cuando se resuelva la operación solicitada.
+        operador -- Esta variable numerica esta relacionada a un match-case para cuando el usuario quiera resolver
+                    la operacion que haya solicitado.
+        texto_ayuda -- Esta variable es para que en caso de haber algo que el programa no pueda realizar en lugar de
+                    saltar un error se le informe al usuario de lo que necesita hacer para corregirse.
+        """
         if self.numero_mostrado != "0":
             self.numero_1 = int(self.numero_mostrado)
             self.numero_mostrado = "0"
@@ -103,6 +142,20 @@ class calculadora(rx.State):
         self.texto_ayuda = ""
     
     def dividir(self):
+        """
+        Mediante esta funcion se prepara al programa en caso de realizar
+        una division, para ello se convierte el numero que se habia introducido
+        hasta la solicitud de una division y se convierte a entero.
+        
+        Keyword arguments:
+        numero_mostrado -- Esta variable es la encargada de ser el numero que se le muestra al usuario en la pagina.
+        numero_1 -- Este es el numero que se utilizara cuando se resuelva la operación solicitada.
+        operador -- Esta variable numerica esta relacionada a un match-case para cuando el usuario quiera resolver
+                    la operacion que haya solicitado.
+        texto_ayuda -- Esta variable es para que en caso de haber algo que el programa no pueda realizar en lugar de
+                    saltar un error se le informe al usuario de lo que necesita hacer para corregirse.
+        """
+        
         if self.numero_mostrado != "0":
             self.numero_1 = int(self.numero_mostrado)
             self.numero_mostrado = "0"
@@ -110,6 +163,15 @@ class calculadora(rx.State):
         self.texto_ayuda = ""
     
     def resolver(self):
+        """
+        Mediante esta funcion se resuelven las operaciones que se realicen mediante
+        el programa.
+        
+        Keyword arguments:
+        argument -- description
+        Return: return_description
+        """
+        
         if self.numero_mostrado != "0":
             self.numero_2 = int(self.numero_mostrado)
         match (self.operador):
